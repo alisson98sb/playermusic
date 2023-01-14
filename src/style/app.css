@@ -1,0 +1,168 @@
+#app * {
+  border-radius: 8px;
+  background-color: #2A2141 !important;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-template-areas:
+  'A B'
+  'A C';
+  gap: 32px;
+  place-content: center;
+  
+  height: 100vh;
+  margin-top: 55px;
+  
+  @media (max-width: 769px) {
+    grid-template-areas:
+    'A'
+    'B'
+    'C';
+  }
+}
+
+
+.player h1{
+  font-size: 24px;
+  color: #E1E1E6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.player p {
+  color: #E1E1E6;
+  
+  font-size: 19px;
+  font-weight: regular;
+  opacity: 0.67;
+}
+
+
+.control-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.track {
+  position: relative;
+  margin-top: 28px;
+}
+
+.track::before {
+  content: '';
+  height: 6px;
+  width: 100%;
+  display: block;
+  background-color: #d9d9d9;
+  opacity: 0.3;
+  border-radius: 9.60297px;
+  
+  position: absolute;
+}
+
+.track::after {
+  content: '';
+  height: 6px;
+  width: 80%;
+  display: block;
+  background-color: #d9d9d9;
+  
+  border-radius: 9.60297px;
+}
+
+.track-time {
+  width: 100%;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9.6px;
+  
+  font-size: 14px;
+  color: #c4c4cc;
+  opacity: 0.7;
+
+}
+
+.header-player-2, .header-player-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#player-2 img, #player-3 img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+}
+
+
+#player-1 {
+  grid-area: A;
+
+  display: flex;
+  justify-content: center;
+  padding: 29px; 
+
+  height: 498px;
+  width: 266px;  
+}
+
+#player-1 img{
+  height: 189px;
+  width: 189px;
+
+  object-fit: cover;
+}
+
+
+
+
+#content-player-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: calc(100% - 2* (38px));
+  height: calc(100% - 2* (38px));
+}
+
+
+.title-player-1{
+  margin-top: 28px;
+  height: 52.6px;
+  width: 189.6px;
+}
+
+
+#control-player-1 {
+  width: 100%;
+}
+
+
+#player-2 {
+  grid-area: B;
+  height: 260px;
+  width: 357px;
+  padding: 29px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+#player-3 {
+  grid-area: C;
+  height: 199px;
+  width: 357px;
+  padding: 29px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
